@@ -5,7 +5,8 @@ orbs:
 jobs:
   build_and_test: # this can be any name you choose
     executor: python/default
-    tag: 3.10
+    parameters:
+        tag: 3.10
     environment:
       CIRCLE_PIPELINE_NUMBER: << pipeline.number >>
     steps:

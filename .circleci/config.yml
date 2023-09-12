@@ -10,9 +10,6 @@ jobs:
       CIRCLE_PIPELINE_NUMBER: << pipeline.number >>
     steps:
       - checkout
-      - run:
-          name: Test
-          command: python -v
       - python/install-packages:
           pkg-manager: pip
       - run:

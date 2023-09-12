@@ -6,7 +6,10 @@ jobs:
   build_and_test: # this can be any name you choose
     executor: python/default
     parameters:
-        tag: 3.10
+      tag:
+        default: '3.10'
+        description: The `cimg/python` Docker image version tag.
+        type: string
     environment:
       CIRCLE_PIPELINE_NUMBER: << pipeline.number >>
     steps:

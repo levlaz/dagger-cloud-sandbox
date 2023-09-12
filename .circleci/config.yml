@@ -1,10 +1,10 @@
 version: 2.1
 orbs:
-  python: circleci/python@3
+  python: circleci/python@2.1.1
 
 jobs:
   build_and_test: # this can be any name you choose
-    executor: python/default
+    executor: python/3.10
     environment:
       CIRCLE_PIPELINE_NUMBER: << pipeline.number >>
     steps:

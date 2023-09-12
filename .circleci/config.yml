@@ -4,12 +4,8 @@ orbs:
 
 jobs:
   build_and_test: # this can be any name you choose
-    executor: python/default
-    parameters:
-      tag:
-        default: '3.10'
-        description: The `cimg/python` Docker image version tag.
-        type: string
+    docker:
+      - image: cimg/python:3.10
     environment:
       CIRCLE_PIPELINE_NUMBER: << pipeline.number >>
     steps:

@@ -7,8 +7,11 @@ jobs:
     docker:
       - image: cimg/python:3.10
     environment:
-      CIRCLE_PIPELINE_NUMBER: << pipeline.number >>
-      _EXPERIMENTAL_DAGGER_CLOUD_TOKEN: "ebc4ff04-62e1-47ad-8059-36d9099772c9"
+        CIRCLE_PIPELINE_NUMBER: << pipeline.number >>
+        CIRCLE_PIPELINE_TRIGGER_LOGIN: << pipeline.trigger_parameters.gitlab.user_username >>
+        CIRCLE_PIPELINE_REPO_URL: << pipeline.trigger_parameters.gitlab.repo_url >>
+        CIRCLE_PIPELINE_REPO_FULL_NAME: << pipeline.trigger_parameters.gitlab.repo_name >>
+        _EXPERIMENTAL_DAGGER_CLOUD_TOKEN: "ebc4ff04-62e1-47ad-8059-36d9099772c9"
     steps:
       - checkout
       - python/install-packages:

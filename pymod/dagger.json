@@ -1,0 +1,7 @@
+{
+  "name": "pymod",
+  "sdk": "python",
+  "dependencies": [
+    "github.com/levlaz/daggerverse/launchdarkly@a6ffbaacba2e26f8aaf83961fa5b4df43a62da08"
+  ]
+}

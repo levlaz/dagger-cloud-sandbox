@@ -1,0 +1,7 @@
+{
+  "name": "importer",
+  "sdk": "go",
+  "dependencies": [
+    "github.com/levlaz/daggerverse/vapor@69882fa6a80ebf4cbf0583415949ec596ca43e3f"
+  ]
+}
